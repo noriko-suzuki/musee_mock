@@ -1,0 +1,11 @@
+.sns {
+  @include clearfix;
+
+  > li {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.l-container {
+  width: 1000px;
+  margin: auto;
+}
+
+.is-sp {
+  .l-container {
+    width: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

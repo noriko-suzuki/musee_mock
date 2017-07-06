@@ -1,0 +1,135 @@
+.l-about {
+  display: flex;
+  height: 100vh;
+  min-height: 768px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: $color-main url(../img/bg/pattern.png) 0 0 repeat;
+  background-size: 120px 158px;
+  transform: translate3d(0, 0, 0);
+  animation: none;
+
+  .is-section-about & {
+    animation: move 100s ease-in-out infinite alternate;
+  }
+}
+
+.l-about__container {
+  text-align: center;
+}
+
+.l-about__heading {
+  margin: 0 0 40px;
+  @include font-size(42);
+  font-weight: 700;
+  color: $color-white;
+  letter-spacing: 0.05em;
+
+  transition: 
+    opacity 0.4s linear,
+    transform 0.8s $easeOutExpo;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+
+  &.is-animated {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.l-about__content {
+  width: 800px;
+  padding: 40px 50px;
+  margin: 0 auto 30px;
+  background: $color-white;
+  color: $color-main;
+  line-height: (30 / 16);
+
+  p {
+    transition: 
+      opacity 0.4s linear,
+      transform 0.8s $easeOutExpo;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.4;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  transition: 
+    opacity 0.4s linear 0.2s,
+    transform 0.8s $easeOutExpo 0.2s;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+
+  &.is-animated {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+    p {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.l-about__subheading {
+  margin: 0 0 30px;
+  @include font-size(24);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  transition: 
+    opacity 0.4s linear 0.4s,
+    transform 0.8s $easeOutExpo 0.4s;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+
+  .is-animated & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.l-about__acroll {
+  position: absolute;
+  right: 0;
+  bottom: (85 / 768) * 100%;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.is-sp {
+  .l-about {
+    height: auto;
+  }
+
+  .l-about__acroll {
+    position: static;
+  }
+
+  &.is-section-about {
+    .l-about {
+      animation: none;
+    }
+  }
+}

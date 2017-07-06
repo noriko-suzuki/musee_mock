@@ -1,0 +1,86 @@
+$duration: 0.6s;
+$position-x: 15px;
+
+.u-arrowBox {
+  position: relative;
+
+  // hoverで出現する白い枠線
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 0 solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: border-width 0.2s linear;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover {
+    &::before {
+      border-width: 8px;
+    }
+  }
+}
+
+.u-arrowBox-arrow--out {
+  .u-arrowBox:hover & {
+    animation: move-out $duration $easeOutExpo 0s 1 normal forwards;
+  }
+}
+
+.u-arrowBox-arrow--in {
+  opacity: 0;
+  transform: translate3d((-$position-x), 0, 0);
+
+  .u-arrowBox:hover & {
+     animation: move-in $duration $easeOutExpo 0.2s 1 normal forwards;
+  }
+}
+
+@keyframes move-out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translate3d($position-x, 0, 0);
+  }
+}
+
+@keyframes move-in {
+  0% {
+    opacity: 0;
+    transform: translate3d((-$position-x), 0, 0);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include mobile {
+  .u-arrowBox {
+    &:hover {
+      &::before {
+        border-width: 0;
+      }
+    }
+  }
+  .u-arrowBox-arrow--out {
+    .u-arrowBox:hover & {
+      animation: none;
+    }
+  }
+
+  .u-arrowBox-arrow--in {
+    .u-arrowBox:hover & {
+       animation: none;
+    }
+  }
+}

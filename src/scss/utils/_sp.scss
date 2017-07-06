@@ -1,0 +1,15 @@
+.u-sp-hidden {}
+
+.u-sp-visible {
+  display: none !important;
+}
+
+@include mobile {
+  .u-sp-hidden {
+    display: none !important;
+  }
+
+  .u-sp-visible {
+    display: initial !important;
+  }
+}

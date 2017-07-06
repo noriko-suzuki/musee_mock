@@ -1,0 +1,58 @@
+%scroll {
+  display: inline-block;
+  width: 60px;
+  padding: 0 0 25px;
+  position: relative;
+  font-family: $font-en;
+  @include font-size(10);
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.08em;
+  @include hover;
+}
+
+.scroll--mainvisual {
+  @extend %scroll;
+  color: $color-gray01;
+  
+}
+
+.scroll--about {
+  @extend %scroll;
+  
+  color: $color-white;
+}
+
+.scroll__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  @include font-size(22);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  animation: bounce 2s ease-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  12% {
+    transform: translate3d(0, 3px, 0);
+  }
+  24% {
+    transform: translate3d(0, 0, 0);
+  }
+  36% {
+    transform: translate3d(0, 3px, 0);
+  }
+  48% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,36 @@
+.l-footer {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.l-footer__logos {
+  margin: 0 0 25px;
+  font-size: 0;
+
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 30px;
+    position: relative;
+
+    &:not(:last-child) {
+      &::before {
+        content: '';
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: $color-gray03;
+      }
+    }
+  }
+}
+
+.l-footer__copyright {
+  color: $color-gray01;
+  @include font-size(8);
+  letter-spacing: 0.1em;
+}

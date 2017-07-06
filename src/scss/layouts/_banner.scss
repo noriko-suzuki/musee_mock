@@ -1,0 +1,41 @@
+.l-banner {
+  padding: 100px 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.l-banner__list {
+  > li {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    transition: 
+      opacity 0.4s linear,
+      transform 0.8s $easeOutExpo;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s);
+      }
+    }
+
+    &.is-animated {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.l-banner__comingsoon {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
