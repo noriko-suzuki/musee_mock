@@ -23,47 +23,63 @@
 
   <div class="l-body">
     <!-- loading -->
-    <div class="loading">
-      <h1 class="siteid"><img src="img/logo/logo.png" alt="MUSEE MARKETING" width="135"></h1>
+    <div class="loading-wrap">
+      <div id="loading">
+        <div class="siteid"><img src="img/logo/logo.png" alt="MUSEE MARKETING" width="135"></div>
+      </div>
     </div>
 
-    <!-- opening -->
-    <div class="opening">
-      <p>女性のために一生懸命。</p>
+    <!-- header -->
+    <header class="l-header">
+      <h1 class="siteid"><img src="img/logo/logo.png" alt="MUSEE MARKETING" width="100" height="40"></h1>
+      <nav class="l-global">
+        <ul>
+          <li class="global-item"><a href="#">ミュゼマーケティングとは</a></li>
+          <li class="global-item"><a href="#">メニュー<i class="arrow"></i></a></li>
+          <li class="global-item"><a href="#">読み物<i class="arrow"></i></a></li>
+          <li class="global-item btn"><a href="#">お問い合わせ・資料ダウンロード</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- sns -->
+    <nav class="l-sns">
+      <ul>
+        <li class="sns-item"><a href="#">F</a></li>
+        <li class="sns-item"><a href="#">T</a></li>
+      </ul>
+    </nav>
+
+    <!-- maincopy -->
+    <!--div class="maincopy-container opening"-->
+    <div class="maincopy-container">
+      <div id="maincopy">
+        <p><img src="img/maincopy.png" alt="女性のために一生懸命。" width="472"></p>
+      </div>
     </div>
 
     <!-- mainvisual -->
     <div class="js-scrollify">
-      <div class="l-mainvisual">
-
-        <div class="l-mainvisual__border--top"></div>
-        <div class="l-mainvisual__border--right"></div>
-        <div class="l-mainvisual__border--bottom"></div>
-        <div class="l-mainvisual__border--left"></div>
+      <div class="l-maincontents">
+        <div class="l-mainvisual">
+          <div class="mv-item mv01">
+            <div class="mv-item-detail">
+              <h2 class="title">
+                <a href="#">
+                  <span class="subtitle">右左もわからないわたしを支えてくれた顧客のみなさまにちょっとずつ恩返しがしたい</span>
+                  人に喜ばれる仕事、ミュゼは私の天職。
+                </a>
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /mainvisual -->
 
 </div>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js"></script>
+  <!--<script src="js/bundle.js"></script>-->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.14/jquery.scrollify.min.js"></script>
-
-  <script src="js/index.js"></script> -->
-
-  <script src="js/bundle.js"></script>
-
-
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9&appId=165759193483975";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

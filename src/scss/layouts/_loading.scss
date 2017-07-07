@@ -1,0 +1,16 @@
+.loader-wrap {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    z-index: 1;
+}
+
+#loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

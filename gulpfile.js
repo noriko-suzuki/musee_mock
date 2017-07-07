@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 
 var browserSync = BrowserSync.create();
 
+
 gulp.task('html', function() {
   gulp.src('src/**/*.html')
     .pipe(gulp.dest('dist'))
@@ -21,6 +22,7 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });
@@ -61,11 +63,12 @@ gulp.task('browser-sync', [
     server: 'dist/'
   });
 });
- 
+
 gulp.task('watch', ['sass'], function () {
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['js']);
+  gulp.watch('src/img/**/*.{png,jpg,svg,gif}', ['img']);
 });
 
 gulp.task('default', ['watch', 'browser-sync']);

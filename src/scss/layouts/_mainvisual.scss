@@ -1,172 +1,49 @@
 .l-mainvisual {
-  min-width: 1000px;
+  width: 100%;
   height: 100vh;
   min-height: 768px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-}
 
-/* border */
-
-$duration: 0.4s;
-$delay: 3.4s;
-
-%l-mainvisual__border {
-  position: absolute;
-  background: $color-main;
-  margin: auto;
-  transition:
-    transform $duration linear;
-  transform: scaleX(0);
-}
-
-.l-mainvisual__border--top {
-  @extend %l-mainvisual__border;
-  height: 2px;
-  top: 5px;
-  right: 5px;
-  left: 5px;
-  transform-origin: 0 0;
-  transform: scaleX(0);
-  transition-delay: $duration * 1 + $delay;
-
-  .l-mainvisual.is-animated & {
-    transform: scaleX(1);
-  }
-}
-
-.l-mainvisual__border--right {
-  @extend %l-mainvisual__border;
-  width: 2px;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  transform-origin: 0 0;
-  transform: scaleY(0);
-  transition-delay: $duration * 2 + $delay;
-
-  .l-mainvisual.is-animated & {
-    transform: scaleY(1);
-  }
-}
-
-.l-mainvisual__border--bottom {
-  @extend %l-mainvisual__border;
-  height: 2px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  transform-origin: 100% 100%;
-  transform: scaleX(0);
-  transition-delay: $duration * 3 + $delay;
-
-  .l-mainvisual.is-animated & {
-    transform: scaleX(1);
-  }
-}
-
-.l-mainvisual__border--left {
-  @extend %l-mainvisual__border;
-  width: 2px;
-  top: 5px;
-  bottom: 5px;
-  left: 5px;
-  transform-origin: 100% 100%;
-  transform: scaleY(0);
-  transition-duration: .6s;
-  transition-timing-function: $easeOutExpo;
-  transition-delay: $duration * 4 + $delay;
-
-  .l-mainvisual.is-animated & {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes width-text{
-  0%{ width:0%; }
-  30%{ width: 47%; }
-  100%{ width: 100%; }
-}
-
-@keyframes bounce-new {
-  0%{ -webkit-transform: scale(0.0); }
-  50% { -webkit-transform: scale(1.2); }
-  95% { -webkit-transform: scale(0.98); }
-  100%{ -webkit-transform: scale(1.0); }
-}
-
-@keyframes bounce-lead {
-  0% {
-    // animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  20% {
-    transform: translate3d(0, 20px, 0);
-  }
-
-  40% {
-    transform: translate3d(0, -15px, 0);
-  }
-
-  55% {
-    transform: translate3d(0, 10px, 0);
-  }
-
-  70% {
-    transform: translate3d(0, -5px, 0);
-  }
-
-  85%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  // 20%, 53%, 80%, to {
-  //   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  //   transform: translate3d(0,0,0);
-  // }
-
-  // 43% {
-  //   animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  //   transform: translate3d(0, -20px, 0);
-  // }
-
-  // 70% {
-  //   animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  //   transform: translate3d(0, -10px, 0);
-  // }
-
-  // 90% {
-  //   transform: translate3d(0,-4px,0);
-  // }
-}
-
-.is-sp {
-  .l-mainvisual {
+  .mv-item{
     width: 100%;
-    min-width: 0;
-    height: auto;
-    min-height: 768px;
-  }
+    background-size: cover;
+    position: relative;
 
-  .l-mainvisual__copyright {
-    transform: translate3d(0, 0, 0);
-    transition-duration: 0s;
-    transition-delay: 0s;
-  }
+    .mv-item-detail{
+      width: 45%;
+      height: 100vh;
+      position: relative;
+      left: 0;
+      top: 0;
+      z-index: 10;
 
-  .l-mainvisual__sns {
-    transform: translate3d(0, 0, 0);
-    transition-duration: 0s;
-    transition-delay: 0s;
-  }
+      .title{
+        width: 78%;
+        font-size: 1.4em;
+        letter-spacing: .12em;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-  %l-mainvisual__border {
-    transform: scale(1);
-    transition-duration: 0s;
-    transition-delay: 0s;
+        .subtitle{
+          margin-bottom: 8px;
+          display: block;
+          font-size: 0.65em;
+          font-weight: lighter;
+          line-height: 1.5;
+          letter-spacing: .1em;
+          opacity: .75;
+        }
+        a{
+          color: $color-black;
+        }
+      }
+    }
+
+    &.mv01{
+      background-image: url('../img/img01.jpg');
+    }
   }
 }

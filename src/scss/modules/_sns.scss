@@ -1,11 +1,27 @@
-.sns {
+.l-sns {
   @include clearfix;
 
-  > li {
-    float: left;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  z-index: 50;
 
-    &:not(:last-child) {
-      margin-right: 10px;
+  ul{
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      margin-left: 10px;
+
+      a{
+        color: $color-main;
+        font-weight: bold;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
   }
+
 }

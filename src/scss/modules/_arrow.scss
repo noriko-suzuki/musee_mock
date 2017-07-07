@@ -1,0 +1,11 @@
+.arrow{
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+  border-right: 1px solid $color-main;
+  border-bottom: 1px solid $color-main;
+  display: inline-block;
+  transform:rotate(45deg);
+  position: relative;
+  top: -4px;
+}

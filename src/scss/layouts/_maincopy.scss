@@ -1,0 +1,29 @@
+.maincopy-container{
+  width: 45%;
+  height: 100vh;
+  background: rgba(255, 255, 255, .85);
+  position: absolute;
+  z-index: 5;
+  transition: all .7s $easeOutCubic;
+
+  &.opening{
+    width:100%;
+    background: $color-white;
+    #maincopy{
+      top: 50%;
+    }
+  }
+}
+
+#maincopy{
+  width: 78%;
+  position:absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .7s $easeOutCubic;
+
+  img{
+    width: 100%;
+  }
+}
