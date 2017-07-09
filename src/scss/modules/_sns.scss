@@ -1,10 +1,16 @@
 .l-sns {
   @include clearfix;
 
+  opacity: 1;
+  transition: all .7s $easeOutCubic;
   position: absolute;
   top: 30px;
   right: 35px;
   z-index: 50;
+
+  &.is-show{
+    opacity: 0;
+  }
 
   ul{
     display: flex;
