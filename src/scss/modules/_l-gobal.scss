@@ -1,0 +1,35 @@
+.l-global{
+  float: right;
+
+  ul{
+    display: flex;
+    justify-content: flex-end;
+
+    .global-item{
+      margin-left: 30px;
+      padding-top: 30px;
+      font-size: 1em;
+      letter-spacing: .05em;
+
+      a{
+        color: $color-main;
+        display: block;
+        font-weight: bold;
+        position: relative;
+
+
+      }
+
+
+      &.btn{
+        padding-top: 22px;
+        a{
+          padding:10px;
+          background: $color-main;
+          color: $color-white;
+          font-size: .85em;
+        }
+      }
+    }
+  }
+}
