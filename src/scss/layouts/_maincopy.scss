@@ -17,14 +17,14 @@
   }
 
   &.is-show{
-    width: 45%;
+    width: 50%;
     background: rgba(255, 255, 255, .85);
 
     #maincopy{
       width: 78%;
       opacity: 1;
-      top:40%;
-      transition: top .7s $easeOutCubic 1s;
+      top:35%;
+      transition: top .8s $easeOutCubic 1s;
     }
   }
 }
@@ -36,13 +36,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all .7s $easeOutCubic;
+  transition: all .7s $easeOutCubic, blur 1.5s $easeOutCubic;
 
   img{
     max-width: 100%;
   }
 
   &.blur{
-    filter: blur(10px);
+    @include blur;
   }
 }

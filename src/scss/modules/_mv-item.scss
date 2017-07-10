@@ -1,0 +1,60 @@
+.mv-item{
+  width: 100%;
+  background-size: cover;
+  transition: all .7s $easeOutCubic;
+  position: relative;
+
+  .mv-item-detail{
+    width: 50%;
+    height: 100vh;
+    opacity: 0;
+    @include blur;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2500;
+    transition: opacity 1s $easeOutCubic 1s, blur 1s $easeOutCubic 1s;
+
+    &.is-show{
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    .title-container{
+      width: 78%;
+      letter-spacing: .12em;
+      position: absolute;
+      top:55.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .num{
+        position: absolute;
+        top: 0;
+        left: -96px;
+      }
+
+      .title{
+        margin-top: 58px;
+        font-size: 1.4em;
+      }
+
+      .subtitle{
+        margin-bottom: 8px;
+        display: block;
+        font-size: 0.65em;
+        font-weight: lighter;
+        line-height: 1.5;
+        letter-spacing: .1em;
+        opacity: .75;
+      }
+      a{
+        color: $color-black;
+      }
+    }
+  }
+
+  &.mv01{
+    background-image: url('../img/img01.jpg');
+  }
+}

@@ -3,11 +3,12 @@
   height: 100px;
   opacity: 0;
   padding: 5px 40px;
-  transition: all .7s $easeOutCubic;
   position: absolute;
   bottom:0;
   left:0;
-  z-index: 50;
+  z-index: 3000;
+  transform: translateY(100px);
+  transition: all 1s $easeOutCubic;
 
   .siteid{
     width:200px;
@@ -20,6 +21,7 @@
 
   &.is-show{
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

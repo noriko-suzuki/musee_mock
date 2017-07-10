@@ -2,14 +2,16 @@
   @include clearfix;
 
   opacity: 1;
-  transition: all .7s $easeOutCubic;
   position: absolute;
   top: 30px;
   right: 35px;
-  z-index: 50;
+  z-index: 3000;
+  transform: translateY(-100px);
+  transition: all 1s $easeOutCubic;
 
   &.is-show{
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   ul{
