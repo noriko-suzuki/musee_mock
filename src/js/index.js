@@ -14,7 +14,7 @@ $(function(){
   setTimeout(function(){
     $('.maincopy-container').removeClass('is-animated');
     $('.maincopy-container').addClass('is-show');
-    $('#loading').hide;
+    $('#loading').hide();
   },6500);
 
   setTimeout(function(){

@@ -6,6 +6,8 @@
   border-bottom: 1px solid $color-main;
   display: inline-block;
   transform:rotate(45deg);
+  transform-origin: 50% 80% 0;
+  transition: transform .3s ease;
   position: relative;
   top: -4px;
 }
