@@ -24,6 +24,9 @@ $(function(){
   setTimeout(function(){
     $('.l-header').addClass('is-show');
     $('.l-sns').addClass('is-show');
+    setInterval(function(){
+      $('.mv01').toggleClass('is-active');
+    }, 8000);
   },8500);
 
 });

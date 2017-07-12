@@ -1,0 +1,14 @@
+.l-mainvisual{
+  overflow: hidden;
+}
+
+.mv-item {
+  will-change: transform;
+  transition: all 2.5s $easeOutCubic;
+
+  &.mv01{
+    &.is-active{
+      opacity: 0;
+    }
+  }
+}

@@ -24,6 +24,11 @@
       a{
         color: $color-main;
         font-weight: bold;
+        transition: all .3s $easeOutCubic;
+
+        &:hover{
+          opacity: .8;
+        }
       }
 
       &:not(:last-child) {
